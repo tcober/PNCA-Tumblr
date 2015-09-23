@@ -114,16 +114,6 @@ a, img {
 }
 
 
-.arrow {
-    fill: {color:Mood Bars};
-}
-
-.department svg{
-    width: 20px;
-    height: 20px;
-    display: inline;
-    margin-left: -5px;
-}
 
 
 
@@ -284,7 +274,16 @@ select {
     outline: none; 
 }
 
+.arrow {
+    fill: {color:Mood Bars};
+}
 
+.department svg{
+    width: 20px;
+    height: 20px;
+    display: inline;
+    margin-left: -5px;
+}
 
 
 
@@ -543,6 +542,12 @@ Quote Post Styles
 }
 
 
+/***************** 
+Panorama Post Styles
+******************/
+.panorama img {
+    width: 100%;
+}
 
 /***************** 
 Social Icon Style
@@ -671,7 +676,7 @@ Permalink Pages
         
         <div class="department">
             <h1>{text:department}
-	            <?xml version="1.0" encoding="utf-8"?>
+                <?xml version="1.0" encoding="utf-8"?>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 56.8 111.9" enable-background="new 0 0 56.8 111.9" xml:space="preserve">
                     <polygon class="arrow" points="1.6,111.9 56.8,56.8 0,0 "/>
@@ -690,10 +695,10 @@ Permalink Pages
         
             <fieldset id="postSorting">
                 <select id="category">
-                    <option value="{BlogURL}">All Posts</option>
-                    <option value="{BlogURL}tagged/forests">forests</option>
-                    <option value="{BlogURL}tagged/trees">trees</option>
-                    <option value="{BlogURL}tagged/wood">wood</option>
+                    <option value="http://pncawebteam.tumblr.com/">All Posts</option>
+                    <option value="http://pncawebteam.tumblr.com/tagged/forests">forests</option>
+                    <option value="http://pncawebteam.tumblr.com/tagged/trees">trees</option>
+                    <option value="http://pncawebteam.tumblr.com/tagged/wood">wood</option>
                 </select>
             </fieldset>
             
@@ -840,42 +845,7 @@ Permalink Pages
     
         <div class="tumblrContain">
         
-            <div class="tumblrList">
-            <h3>UNDERGRAD PROGRAMS</h3>
-                <ul>
-                    <li><a href="http://pncaillustration.tumblr.com/">Illustration</a></li>
-                    <li><a href="http://cdcpnca.tumblr.com/">Communication Design</a></li>
-                    <li><a href="http://pncawriting.tumblr.com/">Writing</a></li>
-                    <li><a href="http://intermediapnca.tumblr.com/">Intermedia</a></li>
-                    <li><a href="http://pncaphoto.tumblr.com/">Photography</a></li>
-                    <li><a href="http://animated-arts-pnca.tumblr.com/">Animated Arts</a></li>
-                    <li><a href="http://pncaprintmaking.tumblr.com/">Printmaking</a></li>
-                    <li><a href="http://pnca-video-sound.tumblr.com/">Video & Sound</a></li>
-                    <li><a href="http://pncapaintdraw.tumblr.com/">Painting</a></li>
-                </ul>
-            </div>
             
-            <div class="tumblrList">
-            <h3>GRAD PROGRAMS</h3>
-                <ul>
-                    <li><a href="http://pncamfavisualstudies.tumblr.com/">Visual Studies</a></li>
-                    <li><a href="http://pncalowresmfa.tumblr.com/">Low Residency</a></li>
-                    <li><a href="http://pncacollaborativedesign.tumblr.com/">Collaborative Design</a></li>
-                    <li><a href="http://printmatrix.tumblr.com/">Print Media</a></li>
-                    <li><a href="http://mfa-acd.tumblr.com/">Applied Craft + Design</a></li>
-                </ul>
-            </div>
-            
-            <div class="tumblrList">
-                <h3>ETCETERA</h3>
-                <ul>
-                    <li><a href="http://pncastudentlife.tumblr.com/">Student Life</a></li>
-                    <li><a href="http://511pnca.tumblr.com/">511 Building</a></li>
-                    <li><a href="http://pncaccc.tumblr.com/">Creative Conservation Corps</a></li>
-                    <li><a href="http://pncaglobalstudiovenice.tumblr.com/">Global Studios Venice</a></li>
-                    <li><a href="http://bridgelabpnca.tumblr.com/">Bridgelab</a></li>
-                </ul>
-            </div>
         </div>
     </div>
     
@@ -1316,7 +1286,6 @@ Permalink Pages
             {block:IndexPage}
                 <script type="text/javascript">
                 var disqus_shortname = '{text:Disqus Shortname}';
-    
                 (function () {
                 var s = document.createElement('script'); s.async = true;
                 s.type = 'text/javascript';
@@ -1356,7 +1325,7 @@ Permalink Pages
 
 <script src="http://static.tumblr.com/4wuyxtv/iA4nl4hdf/salvattore.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
+<script src="http://pnca.edu/tumblr_assets/js/menu.js"></script>
 
 
 
@@ -1387,6 +1356,10 @@ var stuff = $(".logoHolder, .department, .menu, #postSorting, .socialHolder");
 
 showMenu();
 
+// Look at each video
+// Find the height
+// Find the width
+// If the Height is greater than the width change css "padding-bottom"
 var videoSizer = function(){
     var videoLength = $(".videoWrapper iframe").length;
     var videos = $(".videoWrapper iframe");
@@ -1400,6 +1373,8 @@ var videoSizer = function(){
     }
 }
 videoSizer();
+    
+
 
   
 var lightBox = function() {
